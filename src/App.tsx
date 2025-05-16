@@ -80,6 +80,8 @@ export const App: React.FC = (): React.JSX.Element => {
           <Row>
             {options.map((method, index) => {
               const key = `${gateway.name}-${method.installments || "single"}-${index}`;
+              let amountDeduced = parseFloat(amount) - calculatedValues[key];
+              amountDeduced = isNaN(amountDeduced) ? 0 : amountDeduced;
 
               return (
                 <Col
@@ -95,8 +97,14 @@ export const App: React.FC = (): React.JSX.Element => {
                   <div>Taxa fixa: R$ {(method.fixedFeeInCents / 100).toFixed(2)}</div>
                   <div>Taxa percentual: {method.percentageFee}%</div>
                   {calculatedValues[key] !== undefined && (
-                    <div style={{ fontWeight: 800, color: "#722ed1" }}>
-                      Valor final: R$ {calculatedValues[key].toFixed(2)}
+                    <div style={{ display: "flex", gap: 8 }}>
+                      <p style={{ fontWeight: 800, color: "#722ed1" }}>
+                        Valor final: R$ {calculatedValues[key].toFixed(2)}
+                      </p>
+
+                      <p style={{ fontWeight: 800, color: amountDeduced === 0 ? "#007bff" : "#ff4d4f" }}>
+                        (R$ {amountDeduced !== 0 ? "-" : ""} {amountDeduced.toFixed(2)})
+                      </p>
                     </div>
                   )}
                 </Col>
@@ -140,9 +148,14 @@ export const App: React.FC = (): React.JSX.Element => {
                   prefix="R$"
                   type="number"
                   value={amount}
-                  onChange={(e) => setAmount(e.target.value)}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (value === "" || parseFloat(value) > 0) {
+                      setAmount(value);
+                    }
+                  }}
                   style={{ width: "200px" }}
-                  min={0}
+                  min={0.01}
                   step={0.01}
                 />
               </Form.Item>
