@@ -250,6 +250,13 @@ export const paymentGateways: Array<PaymentGateway> = [
     sourceUrl: "https://www.infinitepay.io",
     supportedOptions: [
       {
+        type: PaymentMethod.Boleto,
+        description: "receba em até 3 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 0,
+        installments: null,
+      },
+      {
         type: PaymentMethod.PIX,
         description: "taxa de 0%",
         fixedFeeInCents: 0,
