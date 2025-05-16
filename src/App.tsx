@@ -82,7 +82,14 @@ export const App: React.FC = (): React.JSX.Element => {
               const key = `${gateway.name}-${method.installments || "single"}-${index}`;
 
               return (
-                <Col key={key} style={{ marginRight: index < options.length - 1 ? "56px" : 0 }}>
+                <Col
+                  key={key}
+                  style={{
+                    marginRight: index < options.length - 1 ? "56px" : 0,
+                    marginTop: 8,
+                    marginBottom: 8,
+                  }}
+                >
                   {method.description && <div style={{ fontWeight: 800 }}>{method.description}</div>}
                   {method.installments && <div style={{ fontWeight: 800 }}>Parcelas: {method.installments}</div>}
                   <div>Taxa fixa: R$ {(method.fixedFeeInCents / 100).toFixed(2)}</div>
@@ -171,7 +178,7 @@ export const App: React.FC = (): React.JSX.Element => {
             }))}
             pagination={false}
             bordered
-            scroll={{ x: "max-content", y: "calc(100vh - 350px - 48px)" }}
+            scroll={{ x: 800, y: "calc(100vh - 350px - 48px)" }}
             style={{ height: "100%" }}
           />
         </div>
