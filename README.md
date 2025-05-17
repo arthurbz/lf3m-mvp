@@ -1,54 +1,28 @@
-# React + TypeScript + Vite
+# 💸 LF3M – Less fees means more money
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live App](https://img.shields.io/badge/Live_App-Click_Here-green?style=for-the-badge)](https://arthurbz.github.io/lf3m-mvp)
+![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=007ACC)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Ant Design](https://img.shields.io/badge/AntDesign-20232A?style=for-the-badge&logo=antdesign&logoColor=0170FE)
 
-Currently, two official plugins are available:
+## Problem
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Choosing the right payment gateway in Brazil can be surprisingly complex. Each provider (like Stripe, Mercado Pago, PagSeguro, etc.) offers different transaction fees based on payment method (credit card, PIX, boleto, etc.), settlement time, and amount.
 
-## Expanding the ESLint configuration
+## Solution
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**LF3M** is a simple calculator that helps merchants, developers, and product teams quickly identify the lowest fee for a given payment amount and method. Just input the value and payment method, and it compares fees across gateways.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+This tool is useful for:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Comparing dynamic transaction fees
+- Identifying the most cost-effective gateway based on real-world scenarios
+- Increasing visibility into hidden or method-dependent charges
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+You can access the application [right here](https://arthurbz.github.io/lf3m-mvp).
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Stack
+
+- **TypeScript**
+- **React**
+- **Ant Design**
