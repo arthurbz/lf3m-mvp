@@ -301,4 +301,230 @@ export const paymentGateways: Array<PaymentGateway> = [
       },
     ],
   },
+  {
+    name: "Pagar.me",
+    imageUrl: "https://i0.wp.com/docs.stone.com.br/wp-content/uploads/2025/01/logo-pagarme.png",
+    sourceUrl: "https://www.pagar.me/ofertas",
+    note: "As taxas de cartão de crédito consideram modo parcelado, exceto para 1x, que é considerado o modo à vista. Para mais informações consulte a página da empresa.",
+    supportedOptions: [
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Taxa para modo à vista",
+        fixedFeeInCents: 0,
+        percentageFee: 4.39,
+        installments: "1x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 8.59,
+        installments: "2x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: null,
+        fixedFeeInCents: 0,
+        percentageFee: 9.84,
+        installments: "3x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 11.09,
+        installments: "4x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 12.34,
+        installments: "5x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 13.59,
+        installments: "6x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 15.34,
+        installments: "7x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 16.59,
+        installments: "8x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 17.84,
+        installments: "9x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 19.09,
+        installments: "10x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 20.34,
+        installments: "11x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Modo parcelado",
+        fixedFeeInCents: 0,
+        percentageFee: 21.59,
+        installments: "12x",
+      },
+      {
+        type: PaymentMethod.PIX,
+        description: null,
+        fixedFeeInCents: 0,
+        percentageFee: 1.19,
+        installments: null,
+      },
+      {
+        type: PaymentMethod.Boleto,
+        description: null,
+        fixedFeeInCents: 349,
+        percentageFee: 0,
+        installments: null,
+      },
+    ],
+  },
+  {
+    name: "Efí Bank",
+    imageUrl: "https://sejaefi.com.br/_ipx/_/images/components/menu/logo-efi-bank-orange.svg",
+    sourceUrl: "https://sejaefi.com.br/tarifas#efi-empresas",
+    note: "Para ",
+    supportedOptions: [
+      {
+        type: PaymentMethod.PIX,
+        description: null,
+        fixedFeeInCents: 0,
+        percentageFee: 1.19,
+        installments: null,
+      },
+      {
+        type: PaymentMethod.Boleto,
+        description: null,
+        fixedFeeInCents: 349,
+        percentageFee: 0,
+        installments: null,
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Receba em até 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 3.49,
+        installments: "1x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Receba em até 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 3.99,
+        installments: "2x-6x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Receba em até 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 4.39,
+        installments: "7x-12x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 4.48, // 3.49 + 0.99*1
+        installments: "2x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 5.47, // 3.49 + 0.99*2
+        installments: "3x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 6.46, // 3.49 + 0.99*3
+        installments: "4x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 7.45, // 3.49 + 0.99*4
+        installments: "5x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 8.44, // 3.49 + 0.99*5
+        installments: "6x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 9.43, // 3.49 + 0.99*6
+        installments: "7x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 10.42, // 3.49 + 0.99*7
+        installments: "8x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 11.41, // 3.49 + 0.99*8
+        installments: "9x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 12.4, // 3.49 + 0.99*9
+        installments: "10x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 13.39, // 3.49 + 0.99*10
+        installments: "11x",
+      },
+      {
+        type: PaymentMethod.CreditCard,
+        description: "Uma parcela cada 31 dias",
+        fixedFeeInCents: 0,
+        percentageFee: 14.38, // 3.49 + 0.99*11
+        installments: "12x",
+      },
+    ],
+  },
 ];
